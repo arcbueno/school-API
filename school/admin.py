@@ -2,8 +2,12 @@ from django.contrib import admin
 from school.models import Student, Course
 
 class Students(admin.ModelAdmin):
+    # Data that may be visible
     list_display = ('id', 'name', 'rg', 'cpf', 'birthday',)
+    
+    # Data that may be updated
     list_display_links = ('id', 'name')
+    
     search_fields = ('id', 'name', 'rg', 'cpf')
     list_per_page = 20
 
