@@ -65,3 +65,9 @@ REST API made with Django REST
     ```bash
     python manage.py createsuperuser
     ```
+
+- To run, execute the command
+
+    ```bash
+    python manage.py runserver
+    ```

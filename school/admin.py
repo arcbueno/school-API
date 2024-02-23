@@ -1,5 +1,5 @@
 from django.contrib import admin
-from school.models import Student, Course
+from school.models import Student, Course, Registration
 
 class Students(admin.ModelAdmin):
     # Data that may be visible
@@ -20,3 +20,10 @@ class Courses(admin.ModelAdmin):
     
 
 admin.site.register(Course, Courses)
+
+class Registrations(admin.ModelAdmin):
+    list_display = ('id', 'student', 'course', 'shift')
+    list_display_links = ('id',)
+    
+
+admin.site.register(Registration, Registrations)
